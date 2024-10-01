@@ -1,5 +1,7 @@
 export default function Footer() {
   return (
-    <div>Footer</div>
+    <footer className="bg-black h-[10vh]">
+      footer
+    </footer>
   )
 }
