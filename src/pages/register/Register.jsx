@@ -14,7 +14,7 @@ export default function Register() {
       password: password.current.value
     }
     try {
-      let { data } = await axios.post("http://localhost:3000/"+"auth", newUser)
+      let { data } = await axios.post("https://minga-back-alpha.vercel.app/"+"auth", newUser)
       console.log(data)
     } catch (error) {
       console.log(error)

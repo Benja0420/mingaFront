@@ -9,7 +9,7 @@ export default function Mangas() {
   async function getMangasData() {
     try {
       let { data } = await axios(
-        "http://localhost:3000/" + "mangas"
+        "https://minga-back-alpha.vercel.app/" + "mangas"
       );
       setMangas(data)
     } catch (error) {
@@ -19,7 +19,7 @@ export default function Mangas() {
 
 /*   async function getCategoriesData() {
     try {
-      let { data } = await axios("http://localhost:3000/categories")
+      let { data } = await axios("https://minga-back-alpha.vercel.app/categories")
       setCategories(data)
     } catch (error) {
       console.log(error)

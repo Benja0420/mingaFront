@@ -13,7 +13,7 @@ export default function Login() {
     }
     try {
       let { data } = await axios.post(
-        "http://localhost:3000/"+"auth/login",
+        "https://minga-back-alpha.vercel.app/"+"auth/login",
         user
       );
       console.log(data)

@@ -6,7 +6,7 @@ export default function Carousel() {
 
   async function getCategoriesData() {
     try {
-      let { data } = await axios("http://localhost:3000/"+"categories");
+      let { data } = await axios("https://minga-back-alpha.vercel.app/"+"categories");
       setCategories(data);
       console.log(data);
     } catch (error) {
