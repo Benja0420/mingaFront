@@ -9,7 +9,7 @@ function Layout() {
             <header>
                 <Navbar />
             </header>
-            <main className="bg-gray-500 min-h-[85vh] flex">
+            <main className="bg-gray-500 min-h-[100vh] flex flex-col">
                 <Outlet />
             </main>
             <Footer />

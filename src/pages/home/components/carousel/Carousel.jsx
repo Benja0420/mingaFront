@@ -6,7 +6,7 @@ export default function Carousel() {
 
   async function getCategoriesData() {
     try {
-      let { data } = await axios("https://minga-back-alpha.vercel.app/"+"categories");
+      let { data } = await axios("http://localhost:3000/"+"categories");
       setCategories(data);
       console.log(data);
     } catch (error) {
@@ -29,7 +29,7 @@ export default function Carousel() {
       : setCounter(categories.length - 1);
 
   return (
-    <div className="mt-10">
+    <div className="mt-10 flex">
       <div
         className="flex justify-between items-center p-4"
         style={{ backgroundColor: categories[counter]?.color }}

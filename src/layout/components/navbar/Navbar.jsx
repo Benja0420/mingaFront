@@ -1,18 +1,23 @@
-import { Link } from 'react-router-dom'
+import Display from "./components/Display";
 
 export default function Navbar() {
   return (
-    <nav className='bg-black flex justify-between items-center h-[5vh]'>
+    <nav className="absolute w-full flex justify-between items-center px-8">
       <div>
-        <h1 className='text-white ml-2'>Minga</h1>
+        <Display/>
       </div>
-      <div className='flex gap-2 mr-2'>
+      <div className="flex h-10">
+        <h1 className="text-orange-500 text-3xl">Minga</h1>
+        <img src="/src/img/logoSimple.png" alt="logo minga" />
+      </div>
+    </nav>
+  );
+}
+
+/*       <div className='flex gap-2 mr-2'>
         <Link className='text-white' to="/">Home</Link>
         <Link className='text-white' to="/register">Register</Link>
         <Link className='text-white' to="/login">Login</Link>
         <Link className='text-white' to="/profile/username">Profile</Link>
         <Link className='text-white' to="/mangas">Mangas</Link>
-      </div>
-    </nav>
-  )
-}
+      </div> */
