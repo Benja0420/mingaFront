@@ -6,7 +6,7 @@ export default function Navbar() {
       <div>
         <Display/>
       </div>
-      <div className="flex h-10">
+      <div className="flex h-10 gap-2">
         <h1 className="text-orange-500 text-3xl">Minga</h1>
         <img src="/src/img/logoSimple.png" alt="logo minga" />
       </div>

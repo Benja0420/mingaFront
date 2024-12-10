@@ -6,10 +6,10 @@ import Footer from "./components/footer/Footer.jsx"
 function Layout() {
     return (
         <>
-            <header>
+            <header className="relative">
                 <Navbar />
             </header>
-            <main className="bg-gray-500 min-h-[100vh] flex flex-col">
+            <main className="bg-gray-200 min-h-[100vh] flex flex-col">
                 <Outlet />
             </main>
             <Footer />
