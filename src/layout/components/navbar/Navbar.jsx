@@ -1,5 +1,5 @@
 import Display from "./components/Display";
-
+import logo from "/src/img/logoSimple.png";
 export default function Navbar() {
   return (
     <nav className="absolute w-full flex justify-between items-center px-8">
@@ -8,7 +8,7 @@ export default function Navbar() {
       </div>
       <div className="flex h-10 gap-2">
         <h1 className="text-orange-500 text-3xl">Minga</h1>
-        <img src="/src/img/logoSimple.png" alt="logo minga" />
+        <img src={logo}/>
       </div>
     </nav>
   );
