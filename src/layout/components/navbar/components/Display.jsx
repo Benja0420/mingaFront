@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Menu from '../img/menu.svg';
+import menu from '../img/menu.svg';
 
 const HamburgerMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,7 @@ const HamburgerMenu = () => {
     return (
       <div>
         <button onClick={toggleMenu} className="hamburger-button">
-          <img src={Menu} alt="Menu" />
+          <img src={menu} alt="Menu" />
         </button>
         {isOpen && (
           <div className="menu">
