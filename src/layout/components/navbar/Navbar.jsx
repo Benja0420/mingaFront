@@ -1,4 +1,4 @@
-import Display from "./components/Display";
+import Display from "./components/display/Display";
 import logo from "/src/img/logoSimple.png";
 export default function Navbar() {
   return (
