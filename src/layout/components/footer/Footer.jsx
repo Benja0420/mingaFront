@@ -3,7 +3,7 @@ import facebook from "./img/facebook-black.svg"
 import twitter from "./img/Twitter.svg"
 import vimeo from "./img/Vimeo.svg"
 import youtube from "./img/youtube-black.svg"
-
+import logo from "/src/img/logoSimple.png";
 export default function Footer() {
   return (
     <footer className="bg-white w-full">
@@ -25,7 +25,7 @@ export default function Footer() {
         </menu>
         <logo className="flex items-center w-12 gap-3">
           <h1 className="text-4xl text-orange-500">Minga</h1>
-          <img src="/src/img/logoSimple.png" alt="Logo" />
+          <img src={logo} alt="Logo" />
         </logo>
         <div className="flex flex-col gap-2 items-center">
           <media className="flex gap-4">
