@@ -38,7 +38,7 @@ const HamburgerMenu = () => {
         <img src={Menu} alt="Menu" />
       </button>
       {isOpen && (
-        <div className="lg:w-3/12 w-full fixed bg-gradient-to-t from-orange-500 to-orange-600 h-screen  flex-col  top-0 left-0 z-30">
+        <div className=" lg:w-3/12 w-full fixed bg-gradient-to-t from-orange-500 to-orange-600 h-screen  flex-col  top-0 left-0">
           <div className="flex items-center p-4 justify-between">
             <div className="flex gap-2 items-center cursor-pointer">
               <img src={avatar} className="h-12 z-40" alt="" />

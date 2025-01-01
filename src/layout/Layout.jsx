@@ -9,7 +9,7 @@ function Layout() {
             <header className="relative">
                 <Navbar />
             </header>
-            <main className="bg-gray-200 min-h-[100vh] flex flex-col">
+            <main className="min-h-[100vh] flex">
                 <Outlet />
             </main>
             <Footer />

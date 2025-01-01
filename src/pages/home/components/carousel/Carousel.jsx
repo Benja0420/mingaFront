@@ -29,8 +29,8 @@ export default function Carousel() {
       : setCounter(categories.length - 1);
 
   return (
-    <div className="mt-10 flex justify-center">
-      <div className="flex justify-between gap-1 h-72 w-11/12 items-center p-4 to-orange-600 from-orange-500 bg-gradient-to-t">
+    <div className="hidden xl-block mt-10 lg:flex justify-center">
+      <div className="flex justify-between gap-1 h-72 w-10/12 items-center p-4 to-orange-600 from-orange-500 bg-gradient-to-t">
         <button className="text-2xl" onClick={back}>
           ⬅️
         </button>
