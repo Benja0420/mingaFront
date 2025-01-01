@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Menu from "../../img/Menu.svg";
 import avatar from "./img/avatar.png"
+import { Link } from "react-router-dom";
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,12 +52,12 @@ const HamburgerMenu = () => {
           <ul>
             {menuList.map((item, i) => (
               <li key={i} className="text-center">
-                <a
-                  href={item.link}
+                <Link
+                  to={item.link}
                   className="block text-white p-4 hover:bg-white hover:text-orange-500"
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
