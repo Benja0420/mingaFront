@@ -13,11 +13,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-/*       <div className='flex gap-2 mr-2'>
-        <Link className='text-white' to="/">Home</Link>
-        <Link className='text-white' to="/register">Register</Link>
-        <Link className='text-white' to="/login">Login</Link>
-        <Link className='text-white' to="/profile/username">Profile</Link>
-        <Link className='text-white' to="/mangas">Mangas</Link>
-      </div> */

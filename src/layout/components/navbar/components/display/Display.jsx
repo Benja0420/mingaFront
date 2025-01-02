@@ -51,10 +51,11 @@ const HamburgerMenu = () => {
           </div>
           <ul>
             {menuList.map((item, i) => (
-              <li key={i} className="text-center">
+              <li key={i} className="text-center z-20">
                 <Link
                   to={item.link}
-                  className="block text-white p-4 hover:bg-white hover:text-orange-500"
+                  className="block text-white p-4 hover:bg-white hover:text-orange-500 z-20"
+                  onClick={toggleMenu}
                 >
                   {item.name}
                 </Link>
