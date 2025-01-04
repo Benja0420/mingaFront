@@ -5,6 +5,7 @@ import mangasCover from "./img/mangas.jpg";
 
 export default function Mangas() {
   const [mangas, setMangas] = useState([]);
+  const [categories, setCategories] = useState([])
 
   async function getMangasData() {
     try {
@@ -17,18 +18,20 @@ export default function Mangas() {
     }
   }
 
-  /*   async function getCategoriesData() {
+    async function getCategoriesData() {
     try {
-      let { data } = await axios("https://minga-back-alpha.vercel.app/categories")
+      let { data } = await axios(
+        "https://minga-back-alpha.vercel.app/" + "categories"
+      )
       setCategories(data)
     } catch (error) {
       console.log(error)
     }
-  } */
+  }
 
   useEffect(() => {
     getMangasData();
-    /*     getCategoriesData() */
+    getCategoriesData()
   }, []);
 
   return (
@@ -50,17 +53,42 @@ export default function Mangas() {
           />
         </section>
         <div className="flex justify-center flex-wrap bg-white rounded-t-3xl w-[90%] min-h-[82vh]  z-20">
-          <NewManga />
+          <div className="flex justify-center items-center w-full h-16 gap-4 cursor-pointer">
+            <button className=" px-6 py-1 bg-gray-300 rounded-xl text-white font-bold">
+              all
+            </button>
+            {categories.map((category, i) => (
+              <button
+                key={i}
+                className=" px-6 py-1 rounded-xl text-white font-bold"
+                style={{ backgroundColor: category.color }}
+              >
+                {category.name}
+              </button>
+            ))}
+              
+          </div>
           {mangas.map((manga, i) => (
             <div
               key={i}
               className="bg-white cursor-pointer relative min-w-[290px] h-[160px] lg:w-[420px] lg:h-[210px] m-3 flex justify-between items-center rounded-lg drop-shadow-md"
             >
-              <div
+              <span
                 className="h-5/6 w-2 "
                 style={{ backgroundColor: manga.category_id.color }}
-              ></div>
-              <h2 className="text-md lg:text-xl font-bold">{manga.title}</h2>
+              ></span>
+              <h2 className="text-2xl font-bold absolute top-8 left-6">
+                {manga.title}
+              </h2>
+              <p
+                className="text-xl font-semibold absolute top-16 left-6"
+                style={{ color: manga.category_id.color }}
+              >
+                {manga.category_id.name}
+              </p>
+              <button className="absolute px-6 py-1 bottom-6 left-8 bg-emerald-200 rounded-xl text-emerald-600 font-bold">
+                Read
+              </button>
               <div className="w-1/3">
                 <img
                   className="h-[160px] lg:h-[210px] object-cover rounded-l-full"
@@ -70,6 +98,25 @@ export default function Mangas() {
               </div>
             </div>
           ))}
+          <NewManga />
+          <NewManga />
+          <NewManga />
+          <NewManga />
+          <NewManga />
+          <NewManga />
+          <NewManga />
+          <NewManga />
+          <NewManga />
+          <NewManga />
+          <NewManga />
+          <NewManga />
+          <NewManga />
+          <NewManga />
+          <NewManga />
+          <NewManga />
+          <NewManga />
+          <NewManga />
+          <NewManga />
         </div>
       </div>
     </>

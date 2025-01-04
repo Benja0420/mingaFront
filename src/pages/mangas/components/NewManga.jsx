@@ -1,3 +1,4 @@
+import newManga from "../img/newManga.webp";
 function NewManga() {
   return (
     <>
@@ -11,7 +12,7 @@ function NewManga() {
         <div className="w-1/3">
           <img
             className="h-[160px] lg:h-[210px] object-cover rounded-l-full"
-            src="./../../../src/img/NewManga.webp"
+            src={newManga}
             alt=""
           />
         </div>
