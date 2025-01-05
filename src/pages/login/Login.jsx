@@ -57,8 +57,8 @@ export default function Login() {
           </div>
           {error && <p className="text-center text-red-500">{error}</p>}
           <button onClick={loginUser} className="bg-gradient-to-t from-orange-500 to-orange-600 rounded-md w-full h-10 text-white">Sign In</button>
-          <Link to="/register" className="font-medium text-center text-orange-600 text-sm hover:underline">¿No tienes cuenta? Regístrate</Link>
-          <Link to="/" className="font-medium text-center text-orange-600 text-sm hover:underline">Volver a la página principal</Link>
+          <p>you don't have an account yet? <Link to="/register" className="text-orange-600 hover:underline">Sign up</Link></p>
+          <p>Go back to <Link to="/" className="text-orange-600 hover:underline">home page</Link></p>
         </div>
       </div>
     </>
