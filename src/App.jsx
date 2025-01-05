@@ -13,19 +13,19 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Layout />}
+          element={<Layout/>}
         >
           <Route
             index
-            element={<Home />}
+            element={<Home/>}
           />
           <Route
             path="/register"
-            element={<Register />}
+            element={<Register/>}
           />
           <Route
           path="/login"
-          element={<Login />}
+          element={<Login/>}
           />
           <Route
           path="/profile/:username"
