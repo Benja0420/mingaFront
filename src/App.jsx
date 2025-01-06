@@ -6,6 +6,7 @@ import Login from "./pages/login/Login.jsx"
 import Profile from "./pages/profile/Profile.jsx"
 import Mangas from "./pages/mangas/Mangas.jsx"
 import Manga from "./pages/manga/Manga.jsx"
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         >
           <Route
             index
-            element={<Home/>}
+            element={<PrivateRoute element={<Home />} />}
           />
           <Route
             path="/register"

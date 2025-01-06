@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import loginBg from "./img/login.jpg";
 import logo from "/src/img/logoSimple.png";
 
@@ -8,6 +8,7 @@ export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   async function loginUser(e) {
     e.preventDefault();
@@ -17,10 +18,12 @@ export default function Login() {
     };
     try {
       const { data } = await axios.post(
-        "https://minga-back-alpha.vercel.app/auth/login",
+        "http://localhost:3000/auth/login",
         user
       );
       console.log("Login exitoso:", data);
+      localStorage.setItem("token", data.token);
+      navigate("/");
     } catch (error) {
       if (error.response) {
         setError(error.response.data.message || "Error de inicio de sesión");
