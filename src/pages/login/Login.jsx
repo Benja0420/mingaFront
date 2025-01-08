@@ -5,6 +5,7 @@ import loginBg from "./img/login.jpg";
 import logo from "/src/img/logoSimple.png";
 
 export default function Login() {
+  const url = import.meta.env.VITE_API_URL;
   const emailRef = useRef();
   const passwordRef = useRef();
   const [error, setError] = useState(null);
@@ -18,7 +19,7 @@ export default function Login() {
     };
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/auth/login",
+        url + "/auth/login",
         user
       );
       console.log("Login exitoso:", data);
