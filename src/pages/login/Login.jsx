@@ -22,6 +22,7 @@ export default function Login() {
         url + "/auth/login",
         user
       );
+      console.log("hola desde " + url);
       console.log("Login exitoso:", data);
       localStorage.setItem("token", data.token);
       navigate("/");
