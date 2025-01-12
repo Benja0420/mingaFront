@@ -24,6 +24,7 @@ export default function Login() {
       );
       console.log("hola desde " + url);
       console.log("Login exitoso:", data);
+      console.log("token", data.token);
       localStorage.setItem("token", data.token);
       navigate("/");
     } catch (error) {
