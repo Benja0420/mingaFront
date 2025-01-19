@@ -18,7 +18,7 @@ export default function Mangas() {
     }
   }
 
-    async function getCategoriesData() {
+  async function getCategoriesData() {
     try {
       let { data } = await axios(
         "https://minga-back-alpha.vercel.app/" + "categories"
@@ -66,7 +66,7 @@ export default function Mangas() {
                 {category.name}
               </button>
             ))}
-              
+
           </div>
           {mangas.map((manga, i) => (
             <div

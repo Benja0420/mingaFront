@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Layout/>}
+          element={<Layout />}
         >
           <Route
             index
@@ -22,23 +22,23 @@ function App() {
           />
           <Route
             path="/register"
-            element={<Register/>}
+            element={<Register />}
           />
           <Route
-          path="/login"
-          element={<Login/>}
+            path="/login"
+            element={<Login />}
           />
           <Route
-          path="/profile/:username"
-          element={<Profile/>}
+            path="/profile/:username"
+            element={<Profile />}
           />
           <Route
-          path="/mangas"
-          element={<Mangas/>}
+            path="/mangas"
+            element={<Mangas />}
           />
           <Route
-          path="/manga/:id"
-          element={<Manga/>}
+            path="/manga/:id"
+            element={<Manga />}
           />
         </Route>
       </Routes>
