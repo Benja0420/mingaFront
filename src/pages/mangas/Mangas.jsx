@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import NewManga from "./components/NewManga";
 import mangasCover from "./img/mangas.jpg";
 
 export default function Mangas() {
@@ -98,25 +97,6 @@ export default function Mangas() {
               </div>
             </div>
           ))}
-          <NewManga />
-          <NewManga />
-          <NewManga />
-          <NewManga />
-          <NewManga />
-          <NewManga />
-          <NewManga />
-          <NewManga />
-          <NewManga />
-          <NewManga />
-          <NewManga />
-          <NewManga />
-          <NewManga />
-          <NewManga />
-          <NewManga />
-          <NewManga />
-          <NewManga />
-          <NewManga />
-          <NewManga />
         </div>
       </div>
     </>
