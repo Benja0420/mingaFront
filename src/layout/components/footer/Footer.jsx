@@ -4,6 +4,9 @@ import twitter from "./img/Twitter.svg"
 import vimeo from "./img/Vimeo.svg"
 import youtube from "./img/youtube-black.svg"
 import logo from "/src/img/logoSimple.png";
+
+import { Link } from "react-router-dom"
+
 export default function Footer() {
   return (
     <footer className="bg-white w-full">
@@ -12,14 +15,14 @@ export default function Footer() {
         <menu>
           <ul className="flex gap-4">
             <li>
-              <a className="text-2xl" href="#">
-                Home
-              </a>
+              <Link className="text-2xl" to="/">
+                    Home
+              </Link>
             </li>
             <li>
-              <a className="text-2xl" href="#">
+              <Link className="text-2xl" to="/mangas">
                 Mangas
-              </a>
+              </Link>
             </li>
           </ul>
         </menu>
