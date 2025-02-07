@@ -7,6 +7,8 @@ import axios from "axios";
 
 
 export default function Register() {
+  
+  const url = import.meta.env.VITE_API_URL;
 
     let username = useRef();
     let email = useRef();
@@ -23,7 +25,7 @@ export default function Register() {
       };
       try {
         let { data } = await axios.post(
-          "https://minga-back-alpha.vercel.app/" + "auth",
+          url + "auth",
           newUser
         );
         console.log(data);

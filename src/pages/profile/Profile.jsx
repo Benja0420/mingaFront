@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 export default function Profile() {
+  const url = import.meta.env.VITE_API_URL;
   const { username } = useParams();
   const [profileData, setProfileData] = useState(null);
   const [error, setError] = useState(null);
@@ -11,7 +12,7 @@ export default function Profile() {
     const fetchProfileData = async () => {
       try {
         const response = await axios.get(
-          `https://minga-back-alpha.vercel.app/authors/${username}`
+          url + username
         );
         setProfileData(response.data);
       } catch (error) {
@@ -23,7 +24,7 @@ export default function Profile() {
     if (username) {
       fetchProfileData();
     }
-  }, [username]);
+  }, [url,username]);
 
   if (error) {
     return <div> {error} </div>;

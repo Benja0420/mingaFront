@@ -5,11 +5,12 @@ import mangasCover from "./img/mangas.jpg";
 export default function Mangas() {
   const [mangas, setMangas] = useState([]);
   const [categories, setCategories] = useState([])
+  const url = import.meta.env.VITE_API_URL;
 
   async function getMangasData() {
     try {
       let { data } = await axios(
-        "https://minga-back-alpha.vercel.app/" + "mangas"
+        url + "mangas"
       );
       setMangas(data);
     } catch (error) {
@@ -20,7 +21,7 @@ export default function Mangas() {
   async function getCategoriesData() {
     try {
       let { data } = await axios(
-        "https://minga-back-alpha.vercel.app/" + "categories"
+        url + "categories"
       )
       setCategories(data)
     } catch (error) {
