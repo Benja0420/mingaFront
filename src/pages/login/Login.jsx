@@ -19,7 +19,7 @@ export default function Login() {
     };
     try {
       const { data } = await axios.post(
-        url + "/auth/login",
+        url + "auth/login",
         user
       );
       console.log("hola desde " + url);

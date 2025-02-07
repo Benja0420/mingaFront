@@ -8,9 +8,8 @@ export default function Carousel() {
   async function getCategoriesData() {
     try {
       let { data } = await axios(
-        url + "/categories"
+        url + "categories"
       );
-      console.log("hola desde " + url);
       setCategories(data);
     } catch (error) {
       console.log(error);
