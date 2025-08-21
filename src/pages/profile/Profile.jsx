@@ -12,7 +12,7 @@ export default function Profile() {
     const fetchProfileData = async () => {
       try {
         const response = await axios.get(
-          url + username
+          url+'authors/' + username
         );
         setProfileData(response.data);
       } catch (error) {
@@ -35,20 +35,25 @@ export default function Profile() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center bg-gray-100 min-h-screen">
-      <div className="bg-white shadow-md mx-auto p-8 rounded-lg w-full max-w-md">
-        <div className="flex justify-center mb-4">
-          <img
-            src="https://via.placeholder.com/150"
-            alt="Foto de perfil"
-            className="rounded-full w-32 md:w-48 h-32 md:h-48 object-cover"
-          />
-        </div>
-        <h2 className="mb-2 font-semibold text-2xl text-center">{profileData.bio}</h2>
-        <p className="mb-4 text-center text-gray-600">
-          Información adicional del usuario.
-        </p>
-      </div>
+/* 
+_id
+66fe32336aff4962dc74ea72
+
+ObjectId
+user_id
+66e964e7fd305a8e2fe010fd
+
+ObjectId
+bio
+Este es el bio del autor Benjaja
+
+String
+__v
+0
+ */
+    <div>
+      <h1>Perfil de {profileData.username}</h1>
+      <p>Bio: {profileData.bio}</p>
     </div>
   );
 }
